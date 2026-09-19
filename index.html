@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Yolkhaüs · brokastis visu dienu · Dzirnavu iela 42, Rīga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Just+Another+Hand&display=swap" rel="stylesheet">
+<style>
+/* Yolkhaüs, v2. One logic: their day — breakfast that never ends, a day that starts when you want.
+   The yolk disc (their coral lamp, their egg) is the page's object and says what is on right now.
+   One spacing scale (8 · 16 · 24 · 48 · 96), one measure (1160 px), big type, big photographs, and
+   colour fields that fill the width: tablecloth white, the floor's blue, the yolk. Type: Instrument
+   Serif italic (their menu's italic), Instrument Sans, Just Another Hand for the section names —
+   their menu headings are hand-lettered. Tablein first; the tool is the celebration request. */
+:root{--serif:"Instrument Serif",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;--hand:"Just Another Hand",cursive;
+--cloth:#fbf7f0;--paper:#fff;--ink:#1b1917;--mute:#6c6459;--yolk:#f0a11e;--yolk-d:#d18c12;--chili:#c93a22;--floor:#2b3f57;--line:rgba(27,25,23,.14);--pad:22px;--s1:8px;--s2:16px;--s3:24px;--s4:48px;--s5:96px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cloth);color:var(--ink);font:400 1.1rem/1.55 var(--sans)}
+img{display:block;max-width:100%;height:auto}
+[data-lang][hidden]{display:none!important}
+.wrap{max-width:1160px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.notice{background:#1a120c;color:#c9bfae;font:500 .72rem/1.4 var(--sans);text-align:center;padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:5}.notice b{color:#fff}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;height:64px}
+.top .name{font:italic 400 1.75rem/1 var(--serif);letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.hero-top .top .name{color:#fff}
+.lang a{font:600 .82rem/1 var(--sans);color:inherit;text-decoration:none;margin-left:16px;opacity:.6;cursor:pointer;padding-bottom:3px}
+.lang a.on{opacity:1;border-bottom:2px solid currentColor}
+
+/* type scale */
+h1{font:400 clamp(3.4rem,8vw,7.2rem)/.9 var(--hand);letter-spacing:.02em;margin:0;text-transform:uppercase}
+h1 mark{background:none;color:inherit;position:relative;z-index:0;white-space:nowrap}
+h1 mark::before{content:"";position:absolute;left:-.07em;right:-.07em;top:-.02em;bottom:.2em;background:var(--yolk);z-index:-1;transform:rotate(-1.2deg)}
+h2{font:italic 400 clamp(2rem,3.8vw,3.4rem)/1.02 var(--serif);letter-spacing:-.015em;margin:0}
+.cap{font:400 clamp(2.2rem,3vw,2.9rem)/1 var(--hand);letter-spacing:.03em;color:var(--chili);margin:0 0 var(--s1)}
+.head{max-width:60ch;margin-bottom:var(--s4)}
+.head .sub{margin:var(--s2) 0 0;font-size:1.15rem;color:var(--mute)}
+section{padding:var(--s5) 0}
+
+/* actions */
+.btn{display:inline-block;background:var(--yolk);color:var(--ink);font:600 1.05rem/1 var(--sans);padding:1.05em 1.5em;text-decoration:none;border:0;border-radius:2px;cursor:pointer}
+.btn:hover{background:var(--yolk-d)}
+.btn.dark{background:var(--ink);color:#fff}
+.tel{font:600 1.05rem/1 var(--sans);color:inherit;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.acts{display:flex;gap:var(--s3);align-items:center;flex-wrap:wrap;margin-top:var(--s3)}
+
+/* the disc — their lamp, their yolk */
+.disc{border-radius:50%;background:radial-gradient(circle at 38% 34%,#ffcc63 0,var(--yolk) 48%,#dd8e10 100%);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 30px 60px -24px rgba(90,50,0,.7)}
+.disc b{font:italic 400 1em/1.02 var(--serif);letter-spacing:-.01em}
+.disc small{display:block;font:500 .42em/1.3 var(--sans);margin-top:.35em;color:#4a3608}
+
+/* hero — their plate of eggs, cut round like the plate; the yolk blob on its rim says what is on now */
+.hero-top{color:var(--ink)}
+.hero{padding:0 0 var(--s5);background:var(--cloth)}
+.hero .stage{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);align-items:center;gap:var(--s4);padding-top:var(--s4)}
+.hero .say .sub{margin:var(--s3) 0 0;font-size:1.15rem;max-width:40ch;color:var(--mute)}
+.hero .plate{position:relative;width:min(42vw,520px);aspect-ratio:1;margin-left:auto}
+.hero .plate img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 40px 70px -30px rgba(90,50,0,.55)}
+.hero .plate .disc{position:absolute;left:-8%;bottom:-6%;width:44%;height:44%;font-size:clamp(1.1rem,1.7vw,1.5rem);padding:8%}
+.disc{border-radius:52% 48% 55% 45% / 48% 55% 45% 52%}
+
+/* menu — their card: hand-lettered headings, italic names */
+.menu{background:var(--paper)}
+.menu .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s4);align-items:start}
+.dishes{list-style:none;padding:0;margin:0}
+.dishes li{display:flex;align-items:baseline;gap:var(--s2);padding:.45em 0;font:400 1.32rem/1.2 var(--serif)}
+.dishes li>span:first-child,.dishes li b{line-height:1.2}
+.dishes li span:first-child{flex:0 1 auto;position:relative}
+.dishes li .dots{flex:1;align-self:baseline;height:1em;min-width:24px;background:radial-gradient(circle,rgba(27,25,23,.55) 1px,transparent 1.3px) 0 100%/7px 4px repeat-x}
+.dishes li b{font:italic 400 1em/1.2 var(--serif);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dishes li.hi span:first-child::after{content:" ✦";color:var(--yolk)}
+.menu .cap.small{font-size:2rem;margin:var(--s4) 0 var(--s1)}
+.tops{margin:0;columns:2;column-gap:var(--s3);font:400 1rem/1.7 var(--sans);color:var(--mute)}
+.tops span{display:block;break-inside:avoid}
+.tops b{font:600 1rem/1 var(--sans);color:var(--ink);float:right;font-variant-numeric:tabular-nums}
+.photos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s2);position:sticky;top:var(--s3)}
+.photos figure{margin:0;overflow:hidden}
+.photos figure:first-child{grid-column:1/-1}
+.photos img{width:100%;aspect-ratio:1;object-fit:cover}
+.photos figure:first-child img{aspect-ratio:4/3}
+.menu .note{font:400 .9rem/1.5 var(--sans);color:var(--mute);margin:var(--s3) 0 0}
+.only-phone{display:none}
+
+/* the room — the floor's blue */
+.room{background:var(--floor);color:#fff}
+.room .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s5);align-items:center}
+.room figure{margin:0;box-shadow:0 40px 60px -40px rgba(0,0,0,.9)}
+.room figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.room .cap{color:var(--yolk)}
+.room .head{margin-bottom:var(--s3);max-width:none}
+.room blockquote{margin:0;padding:0 0 0 var(--s3);border-left:3px solid var(--yolk);font:italic 400 clamp(1.4rem,2vw,1.9rem)/1.3 var(--serif)}
+.room blockquote+blockquote{margin-top:var(--s3)}
+.room cite{display:block;font:400 .9rem/1.4 var(--sans);font-style:normal;color:#b9c6d6;margin-top:var(--s1)}
+.vinyl{width:150px;height:150px;flex:none;display:block;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6));animation:spin 1.8s linear infinite;transform-origin:50% 50%}
+.vinyl-row{display:flex;align-items:center;gap:var(--s3);margin-top:var(--s4)}
+.vinyl-row p{margin:0;font:400 1rem/1.5 var(--sans);color:#b9c6d6;max-width:24ch}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.vinyl{animation:none}}
+
+/* the day — on the yolk */
+.day{background:var(--yolk);color:var(--ink)}
+.day .cap{color:var(--ink)}
+.day .head .sub{color:#4a3608}
+.day .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s5);align-items:center}
+.bars{list-style:none;padding:0;margin:0}
+.bars li{display:grid;grid-template-columns:150px minmax(0,1fr) 120px;gap:var(--s2);align-items:center;padding:var(--s1) 0;font:500 1.05rem/1.2 var(--sans)}
+.bars li .t{position:relative;height:22px;background:rgba(255,255,255,.35)}
+.bars li .t i{position:absolute;top:0;bottom:0;background:var(--ink)}
+.bars li .h{font-variant-numeric:tabular-nums;text-align:right;color:#4a3608}
+.bars li.now .t i{background:var(--chili)}
+.bars li.now{font-weight:600}
+.bars .scale{display:grid;grid-template-columns:150px minmax(0,1fr) 120px;gap:var(--s2);font:500 .8rem/1 var(--sans);color:#4a3608;margin-top:var(--s1)}
+.bars .scale div{display:flex;justify-content:space-between}
+.day figure{margin:0;box-shadow:0 40px 60px -40px rgba(60,30,0,.6)}
+.day figure img{width:100%;aspect-ratio:1;object-fit:cover}
+.day .note{font:400 .9rem/1.5 var(--sans);color:#4a3608;margin:var(--s3) 0 0}
+
+/* a table — Tablein first, then the celebration slip */
+.book{background:var(--paper)}
+.book .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s5);align-items:start}
+.book .side .head{margin-bottom:var(--s3);max-width:none}
+.book .side figure{margin:var(--s4) 0 0}
+.book .side figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.form{background:var(--cloth);border:1px solid var(--line)}
+.form .fh{background:var(--yolk);color:var(--ink);padding:var(--s2) var(--s3);font:italic 400 1.6rem/1.2 var(--serif)}
+.form .body{padding:var(--s1) var(--s3) var(--s3)}
+.row{display:grid;grid-template-columns:140px minmax(0,1fr);gap:var(--s2);align-items:center;padding:var(--s2) 0;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+.row .k{font:600 .95rem/1.3 var(--sans)}
+.form input[type=text],.form input[type=tel],.form input[type=date],.form select{width:100%;border:0;border-bottom:1.5px solid var(--ink);background:transparent;font:400 1.08rem/1.3 var(--sans);color:var(--ink);padding:6px 0;outline:none;border-radius:0;-webkit-appearance:none;appearance:none;min-height:40px}
+.form select{background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231b1917' stroke-width='2'/%3E%3C/svg%3E") no-repeat right center;padding-right:22px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s2)}
+.qty{display:flex;align-items:center;gap:var(--s2)}
+.qty button{width:38px;height:38px;border:2px solid var(--ink);background:transparent;font:700 1.2rem/1 var(--sans);color:var(--ink);cursor:pointer;padding:0}
+.qty output{font:600 1.35rem/1 var(--sans);min-width:2.2ch;text-align:center}
+.msg{background:#fff;padding:var(--s2);font:400 .98rem/1.55 var(--sans);white-space:pre-wrap;margin:var(--s3) 0 var(--s2);min-height:110px;border:1px solid var(--line)}
+.send{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.priv{font:400 .84rem/1.45 var(--sans);color:var(--mute);margin:var(--s2) 0 0}
+
+/* guests */
+.qs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.qs blockquote{margin:0;font:italic 400 clamp(1.35rem,1.9vw,1.75rem)/1.3 var(--serif)}
+.qs blockquote::before{content:"„";display:block;font:400 4rem/.55 var(--hand);color:var(--yolk);margin-bottom:var(--s2)}
+.qs cite{display:block;font:400 .9rem/1.4 var(--sans);font-style:normal;color:var(--mute);margin-top:var(--s2)}
+.qs .tr{grid-column:1/-1;font:400 .85rem/1.4 var(--sans);color:var(--mute);margin:0}
+
+/* where */
+.visit{background:var(--paper)}
+.visit .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s5);align-items:center}
+.visit figure{margin:0}
+.visit figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.visit figcaption{font:400 .85rem/1.4 var(--sans);color:var(--mute);margin-top:var(--s1)}
+.visit .head{margin-bottom:var(--s3);max-width:none}
+.hours{margin:0;font-size:1.1rem}
+.hours b{display:inline-block;min-width:11em;font-weight:600}
+.phone{display:inline-block;margin:var(--s3) 0 0;font:italic 400 clamp(2rem,3.4vw,2.8rem)/1.1 var(--serif);color:var(--ink);text-decoration:none;border-bottom:3px solid var(--yolk)}
+.links{margin:var(--s3) 0 0;font:600 1rem/1.7 var(--sans)}
+.links a{display:inline-block;color:var(--ink);text-decoration:underline;text-underline-offset:5px;margin:0 var(--s3) var(--s1) 0;white-space:nowrap}
+
+footer{padding:var(--s3) 0 var(--s4);font:400 .84rem/1.55 var(--sans);color:var(--mute)}
+footer p{margin:0 0 var(--s1);max-width:100ch}
+
+@media(max-width:860px){
+  section{padding:var(--s4) 0}
+  .head{margin-bottom:var(--s3)} .head .sub{font-size:1.05rem}
+  .hero{padding-bottom:var(--s4)}
+  .hero .stage{display:block;padding-top:var(--s2)}
+  .hero .plate{width:min(78vw,340px);margin:0 auto var(--s4)}
+  .hero .plate .disc{left:-6%;bottom:-8%;width:46%;height:46%;font-size:1rem}
+  .hero .say .sub{font-size:1.05rem;max-width:none}
+  h1{font-size:3.6rem}
+  .vinyl{width:104px;height:104px} .vinyl-row{margin-top:var(--s3)}
+  .cap{font-size:2.1rem}
+  .menu .grid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .photos{order:-1;position:static;margin:0 calc(var(--pad)*-1);gap:var(--s1)}
+  .only-phone{display:block}
+  .dishes li{font-size:1.25rem}
+  .tops{columns:1}
+  .room .grid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .room figure{margin:0 calc(var(--pad)*-1)} .room figure img{aspect-ratio:4/3}
+  .day .grid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .day figure{order:-1;margin:0 calc(var(--pad)*-1)} .day figure img{aspect-ratio:16/10}
+  .bars li{grid-template-columns:84px minmax(0,1fr) 100px;font-size:.92rem;gap:var(--s1)}
+  .bars .scale{grid-template-columns:84px minmax(0,1fr) 100px;gap:var(--s1)}
+  .book .grid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .book .side figure{display:none}
+  .form .fh{padding:var(--s2)} .form .body{padding:var(--s1) var(--s2) var(--s2)}
+  .row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .qs{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .visit .grid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .visit figure{margin:0 calc(var(--pad)*-1)} .visit figcaption{padding:0 var(--pad)}
+  .hours b{display:block;min-width:0}
+}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita</b> ·
+  <span data-lang="lv">Nesaistošs dizaina priekšlikums, nav restorāna oficiālā lapa.</span>
+  <span data-lang="en" hidden>A non-binding design proposal, not the restaurant's official site.</span>
+</div>
+
+<section class="hero">
+  <div class="hero-top"><div class="wrap top">
+    <a class="name" href="#">yolkhaüs</a>
+    <nav class="lang" aria-label="Valoda"><a data-set="lv" class="on">LV</a><a data-set="en">EN</a></nav>
+  </div></div>
+  <div class="wrap stage">
+    <div class="say">
+      <h1><span data-lang="lv">Brokastis, kas <mark>nekad</mark> nebeidzas.</span><span data-lang="en" hidden>Breakfast that <mark>never</mark> ends.</span></h1>
+      <p class="sub"><span data-lang="lv">Olas dažādās interpretācijās, vinila plates un galds ar baltu galdautu. Dzirnavu iela 42 — no astoņiem rītā, piektdien un sestdien līdz vienpadsmitiem vakarā.</span><span data-lang="en" hidden>Eggs in every interpretation, vinyl on the turntable and a table with a white cloth. Dzirnavu iela 42 — from eight in the morning, Fridays and Saturdays until eleven at night.</span></p>
+      <div class="acts">
+        <a class="btn" href="https://yolkhaus.tablein.com/lv" rel="noopener"><span data-lang="lv">Rezervēt galdiņu</span><span data-lang="en" hidden>Book a table</span></a>
+        <a class="tel" href="tel:+37127020031">27 020 031</a>
+      </div>
+    </div>
+    <figure class="plate"><img src="img/yolk.jpg" width="1400" height="1400" fetchpriority="high" alt="Ceptas olas ar čili gaļu, parmezānu un maurloku uz balta šķīvja"><div class="disc" data-disc><b>…</b><small>…</small></div></figure>
+  </div>
+</section>
+
+<section class="menu"><div class="wrap">
+  <div class="head">
+    <p class="cap">Breakfast</p>
+    <h2><span data-lang="lv">Olas — dažādās interpretācijās</span><span data-lang="en" hidden>Eggs — in every interpretation</span></h2>
+    <p class="sub"><span data-lang="lv">Ēdienkarte kā uz vietas — angliski, ar cenām, kādas tās ir Tablein sistēmā (2026). ✦ — tas, kas redzams fotogrāfijās.</span><span data-lang="en" hidden>The menu as at the table — in English, with the prices as listed in their Tablein system (2026). ✦ — what the photographs show.</span></p>
+  </div>
+  <div class="grid">
+    <div>
+      <ul class="dishes">
+        <li><span>Yolkhaüs Omelette</span><i class="dots"></i><b>4.50</b></li>
+        <li><span>Inferno Eggs</span><i class="dots"></i><b>8.90</b></li>
+        <li><span>Turkish Eggs</span><i class="dots"></i><b>8.50</b></li>
+        <li><span>French Omelette</span><i class="dots"></i><b>8.50</b></li>
+        <li><span>French Noir Omelette</span><i class="dots"></i><b>9.90</b></li>
+        <li><span>Scrambled Eggs with Parmesan and Sourdough</span><i class="dots"></i><b>8.80</b></li>
+        <li class="hi"><span>Rouge Shakshuka</span><i class="dots"></i><b>9.90</b></li>
+        <li><span>Japanese Eggs</span><i class="dots"></i><b>8.50</b></li>
+        <li class="hi"><span>Potato Waffles With Chili Sour Cream</span><i class="dots"></i><b>8.50</b></li>
+        <li><span>Fried Eggs With Tuna And Ponzu Sauce</span><i class="dots"></i><b>10.80</b></li>
+      </ul>
+      <p class="cap small">Sweetie</p>
+      <ul class="dishes">
+        <li><span>Tahini Oatmeal Porridge</span><i class="dots"></i><b>6.80</b></li>
+        <li class="hi"><span>Cottage Cheese Donuts With Greek Yogurt And Honey</span><i class="dots"></i><b>7.50</b></li>
+        <li><span>Cottage Cheese Pancakes</span><i class="dots"></i><b>7.50</b></li>
+        <li><span>Crêpe With Passion Fruit And Mascarpone</span><i class="dots"></i><b>7.90</b></li>
+      </ul>
+      <p class="cap small">Toppings</p>
+      <p class="tops">
+        <span>Egg Your Way <b>1.50</b></span><span>French Butter Bread <b>2.50 / 3.50</b></span><span>Fig Jam · Chia Blueberry · Berry Mix · Orange <b>2.00</b></span><span>Comté Cheese <b>3.50</b></span><span>Cottage Cheese <b>3.50</b></span><span>Avocado Furikake <b>3.80</b></span><span>Parmesan Salad <b>4.70</b></span><span>Seasonal Fresh Vegetables <b>3.80</b></span><span>Broccolini <b>4.50</b></span><span>Asparagus <b>4.50</b></span><span>Beef Pastrami <b>4.50</b></span><span>Bacon <b>3.90</b></span><span>Chicken Pâté With Plum Jam <b>3.90</b></span><span>Mushroom And Truffle Pâté <b>4.40</b></span><span>Salmon <b>5.80</b></span><span>Royal Black Caviar (20 g) <b>32.50</b></span>
+      </p>
+      <p class="note"><span data-lang="lv">Pilna ēdienkarte, arī dzērieni — Tablein.</span><span data-lang="en" hidden>The full menu, drinks included — on Tablein.</span></p>
+    </div>
+    <div class="photos">
+      <figure><img src="img/waffles.jpg" width="1200" height="1200" loading="lazy" alt="Kartupeļu vafeles ar čili skābo krējumu"></figure>
+      <figure><img src="img/balls.jpg" width="1000" height="1000" loading="lazy" alt="Biezpiena virtuļi ar grieķu jogurtu un medu"></figure>
+      <figure><img src="img/omelette.jpg" width="1200" height="1200" loading="lazy" alt="Galds ar baltu galdautu: omlete ar trifelēm, vafeles, maize"></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="room"><div class="wrap"><div class="grid">
+  <figure><img src="img/room.jpg" width="1200" height="1600" loading="lazy" alt="Zāle: apaļš galds ar baltu galdautu, koraļļsarkana apaļa lampa, akmens kolonna"></figure>
+  <div>
+    <div class="head">
+      <p class="cap"><span data-lang="lv">Telpa</span><span data-lang="en" hidden>The room</span></p>
+      <h2><span data-lang="lv">Kā drauga virtuvē</span><span data-lang="en" hidden>Like a friend's kitchen</span></h2>
+    </div>
+    <blockquote data-lang="lv">„Fonā griežas vinila plates, radot sajūtu, ka esi iegriezies drauga virtuvē, kur laiks nedaudz palēninās.”<cite>LiveRiga, „Jaunas vietas pilsētā”</cite></blockquote>
+    <blockquote data-lang="lv">„Brokastis tiek pasniegtas visas dienas garumā, bez steigas un bez noteikumiem.”<cite>turpat</cite></blockquote>
+    <blockquote data-lang="en" hidden>“Vinyl records turn in the background, giving the feeling that you have dropped into a friend's kitchen, where time slows down a little.”<cite>LiveRiga, “New spots in the city” — translated from Latvian</cite></blockquote>
+    <blockquote data-lang="en" hidden>“Breakfast is served all day long, without hurry and without rules.”<cite>same source, translated</cite></blockquote>
+    <div class="vinyl-row"><svg class="vinyl" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49" fill="#121212"/><g fill="none" stroke="#2a2a2a" stroke-width="1"><circle cx="50" cy="50" r="45"/><circle cx="50" cy="50" r="41.5"/><circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="34.5"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="27.5"/><circle cx="50" cy="50" r="24"/></g><circle cx="50" cy="50" r="17" fill="#f0a11e"/><circle cx="50" cy="50" r="17" fill="none" stroke="#121212" stroke-width="1.5"/><circle cx="50" cy="50" r="2.4" fill="#121212"/></svg><p><span data-lang="lv">33 apgriezieni minūtē — tāpat kā zālē. Kafija vai glāze vīna, kā nu kuram.</span><span data-lang="en" hidden>33 revolutions a minute — as in the room. Coffee or a glass of wine, whichever you fancy.</span></p></div>
+  </div>
+</div></div></section>
+
+<section class="day"><div class="wrap">
+  <div class="head">
+    <p class="cap"><span data-lang="lv">Diena</span><span data-lang="en" hidden>The day</span></p>
+    <h2><span data-lang="lv">Diena sākas tad, kad tu to vēlies</span><span data-lang="en" hidden>The day starts when you want it to</span></h2>
+    <p class="sub"><span data-lang="lv">Darbdienās — brokastis līdz četriem. Piektdien un sestdien virtuve strādā līdz vienpadsmitiem vakarā: kafija vai glāze vīna, kā nu kuram.</span><span data-lang="en" hidden>On weekdays — breakfast until four. On Fridays and Saturdays the kitchen runs until eleven at night: coffee or a glass of wine, whichever you fancy.</span></p>
+  </div>
+  <div class="grid">
+    <div>
+      <ul class="bars" id="bars"></ul>
+      <p class="note"><span data-lang="lv">Darba laiks — kā Tablein rezervāciju sistēmā. Šodienas rinda — sarkana.</span><span data-lang="en" hidden>Hours as in their Tablein reservation system. Today's row is red.</span></p>
+    </div>
+    <figure><img src="img/latte.jpg" width="1000" height="1000" loading="lazy" alt="Kafijas tase ar piena putu zīmējumu un svece"></figure>
+  </div>
+</div></section>
+
+<section class="book" id="svinibas"><div class="wrap"><div class="grid">
+  <div class="side">
+    <div class="head">
+      <p class="cap"><span data-lang="lv">Galdiņš</span><span data-lang="en" hidden>A table</span></p>
+      <h2><span data-lang="lv">Rezervēt — kā līdz šim, Tablein</span><span data-lang="en" hidden>Book — as before, on Tablein</span></h2>
+      <p class="sub"><span data-lang="lv">Galdiņu brokastīm vai vakaram rezervē turpat, kur līdz šim. Svinībām — dzimšanas dienai, kolēģu brokastīm — uzrakstiet ar zīmi blakus: ziņa aiziet uz restorāna e-pastu ar visu, kas jāzina.</span><span data-lang="en" hidden>A table for breakfast or the evening is booked where it always was. For a celebration — a birthday, a team breakfast — use the slip beside: the message goes to the restaurant's e-mail with everything they need to know.</span></p>
+    </div>
+    <a class="btn" href="https://yolkhaus.tablein.com/lv" rel="noopener"><span data-lang="lv">Rezervēt galdiņu ↗</span><span data-lang="en" hidden>Book a table ↗</span></a>
+  </div>
+  <form class="form" id="slip" onsubmit="return false">
+    <div class="fh"><span data-lang="lv">Svinības Yolkhaüs</span><span data-lang="en" hidden>A celebration at Yolkhaüs</span></div>
+    <div class="body">
+      <div class="row"><span class="k"><span data-lang="lv">Kas svinams</span><span data-lang="en" hidden>The occasion</span></span>
+        <select id="occ">
+          <option value="dz" data-lv="dzimšanas diena" data-en="a birthday">dzimšanas diena</option>
+          <option value="ko" data-lv="kolēģu brokastis" data-en="a team breakfast">kolēģu brokastis</option>
+          <option value="gi" data-lv="ģimenes pusdienas" data-en="a family lunch">ģimenes pusdienas</option>
+          <option value="ci" data-lv="cits iemesls" data-en="another occasion">cits iemesls</option>
+        </select></div>
+      <div class="row"><span class="k"><span data-lang="lv">Cik viesu</span><span data-lang="en" hidden>How many guests</span></span>
+        <div class="qty"><button type="button" id="minus" aria-label="mazāk">−</button><output id="qty">8</output><button type="button" id="plus" aria-label="vairāk">+</button></div></div>
+      <div class="row"><span class="k"><span data-lang="lv">Kad</span><span data-lang="en" hidden>When</span></span>
+        <div class="two"><input type="date" id="date"><select id="time"></select></div></div>
+      <div class="row"><span class="k"><span data-lang="lv">Vēlmes</span><span data-lang="en" hidden>Wishes</span></span>
+        <input type="text" id="wish" data-ph-lv="piem., kūka ar sveci, galds pie loga" data-ph-en="e.g. a cake with a candle, a table by the window" placeholder="piem., kūka ar sveci, galds pie loga" autocomplete="off"></div>
+      <div class="row"><span class="k"><span data-lang="lv">Vārds</span><span data-lang="en" hidden>Name</span></span><input type="text" id="name" autocomplete="name"></div>
+      <div class="row"><span class="k"><span data-lang="lv">Tālrunis</span><span data-lang="en" hidden>Phone</span></span><input type="tel" id="phone" autocomplete="tel" inputmode="tel"></div>
+      <div class="msg" id="msg" aria-live="polite"></div>
+      <div class="send">
+        <a class="btn dark" id="mail" href="#"><span data-lang="lv">Sūtīt e-pastā</span><span data-lang="en" hidden>Send by e-mail</span></a>
+        <a class="tel" href="tel:+37127020031"><span data-lang="lv">vai zvanīt 27 020 031</span><span data-lang="en" hidden>or call 27 020 031</span></a>
+      </div>
+      <p class="priv"><span data-lang="lv">Ziņa top jūsu ierīcē un aiziet no jūsu pasta uz yolkhausriga@gmail.com — šī lapa neko neglabā.</span><span data-lang="en" hidden>The message is composed on your device and goes from your own mail to yolkhausriga@gmail.com — this page stores nothing.</span></p>
+    </div>
+  </form>
+</div></div></section>
+
+<section class="guests"><div class="wrap">
+  <div class="head">
+    <p class="cap"><span data-lang="lv">Viesi</span><span data-lang="en" hidden>Guests</span></p>
+    <h2><span data-lang="lv">4,5★ no 186 atsauksmēm</span><span data-lang="en" hidden>4.5★ from 186 reviews</span></h2>
+  </div>
+  <div class="qs" data-lang="lv">
+    <blockquote>Ļoti garšīgs ēdiens, patīkama apkalpošana un skaists, pārdomāts interjers.<cite>Agnese Z. · Google · 5★</cite></blockquote>
+    <blockquote>Viegls ēdiens, izbaudīta plaša garšu gamma.<cite>Liva L. · Google · 5★</cite></blockquote>
+    <blockquote>Ēdiens un dzērieni bija lieliski — viss ļoti garšīgs un skaisti pasniegts.<cite>Gundega B. · Google · 5★ · par dzimšanas dienas svinībām</cite></blockquote>
+  </div>
+  <div class="qs" data-lang="en" hidden>
+    <blockquote>Very tasty food, pleasant service and a beautiful, well-thought-out interior.<cite>Agnese Z. · Google · 5★</cite></blockquote>
+    <blockquote>Light food, a wide range of flavours enjoyed.<cite>Liva L. · Google · 5★</cite></blockquote>
+    <blockquote>The food and drinks were excellent — everything was delicious and beautifully presented.<cite>Gundega B. · Google · 5★ · about a birthday celebration</cite></blockquote>
+    <p class="tr">Translated from Latvian.</p>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap"><div class="grid">
+  <figure><img src="img/courtyard.jpg" width="640" height="480" loading="lazy" alt="Pagalms Dzirnavu ielā 42: melnas stikla fasādes, saulessargi"><figcaption><span data-lang="lv">Pagalms Dzirnavu ielā 42 — Google Street View, 2025</span><span data-lang="en" hidden>The courtyard at Dzirnavu iela 42 — Google Street View, 2025</span></figcaption></figure>
+  <div>
+    <div class="head">
+      <p class="cap"><span data-lang="lv">Kur</span><span data-lang="en" hidden>Where</span></p>
+      <h2>Dzirnavu iela 42</h2>
+    </div>
+    <p class="hours" data-lang="lv"><b>Pirmdien – ceturtdien</b> 8:00 – 16:00<br><b>Piektdien</b> 8:00 – 23:00<br><b>Sestdien</b> 9:00 – 23:00<br><b>Svētdien</b> 10:00 – 20:00</p>
+    <p class="hours" data-lang="en" hidden><b>Monday – Thursday</b> 8:00 – 16:00<br><b>Friday</b> 8:00 – 23:00<br><b>Saturday</b> 9:00 – 23:00<br><b>Sunday</b> 10:00 – 20:00</p>
+    <a class="phone" href="tel:+37127020031">27 020 031</a>
+    <p class="links"><a href="https://yolkhaus.tablein.com/lv" rel="noopener">Tablein ↗</a><a href="https://www.instagram.com/yolkhaus/" rel="noopener">Instagram ↗</a><a href="https://www.google.com/maps/search/?api=1&query=Yolkha%C3%BCs+Dzirnavu+iela+42+R%C4%ABga" rel="noopener"><span data-lang="lv">Google kartē ↗</span><span data-lang="en" hidden>Google Maps ↗</span></a><a href="mailto:yolkhausriga@gmail.com">yolkhausriga@gmail.com</a></p>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <p><span data-lang="lv">Fotogrāfijas: viesi Google kartēs — Daugvinas Liberis, Danil Gontovnik, Laura Serma, Judith Michel, D.L, Ivan Bezuglov · pagalms: Google Street View · Fakti: LiveRiga, Tablein (ēdienkarte, darba laiks, e-pasts), Google kartes.</span><span data-lang="en" hidden>Photographs: guests on Google Maps — Daugvinas Liberis, Danil Gontovnik, Laura Serma, Judith Michel, D.L, Ivan Bezuglov · courtyard: Google Street View · Facts: LiveRiga, Tablein (menu, hours, e-mail), Google Maps.</span></p>
+  <p><span data-lang="lv">Ja priekšlikums interesē — nākamais solis: jūsu pašu fotogrāfijas, ēdienkarte latviski un angliski ar dzērieniem, vakara piedāvājums, šī lapa jūsu adresē (yolkhaus.lv ir brīvs) un poga „Vietne” Google kartēs. Dizaina priekšlikums: Nikita · ngoloveckis@gmail.com</span><span data-lang="en" hidden>If this proposal is of interest — the next step: your own photographs, the menu in Latvian and English with drinks, the evening offer, this page at your own address (yolkhaus.lv is free) and the “Website” button on Google Maps. Design proposal: Nikita · ngoloveckis@gmail.com</span></p>
+</div></footer>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  let lang='lv', qty=8;
+  const H={1:[8,16],2:[8,16],3:[8,16],4:[8,16],5:[8,23],6:[9,23],0:[10,20]};
+  const DN={lv:['svētdien','pirmdien','otrdien','trešdien','ceturtdien','piektdien','sestdien'],en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']};
+  const rows={lv:[['Pirmdien – ceturtdien',1],['Piektdien',5],['Sestdien',6],['Svētdien',0]],en:[['Monday – Thursday',1],['Friday',5],['Saturday',6],['Sunday',0]]};
+  function riga(){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());const g=t=>p.find(x=>x.type===t).value;const wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[g('weekday')];return {wd,h:parseInt(g('hour'),10)%24+parseInt(g('minute'),10)/60}}
+  function disc(){
+    const {wd,h}=riga(); const [o,c]=H[wd]; let big,small;
+    if(h>=o&&h<c){
+      if(lang==='lv'){big=(c>16?'Brokastis — un vakars':'Brokastis');small=`tagad · līdz ${c}:00`}
+      else{big=(c>16?'Breakfast — and the evening':'Breakfast');small=`now · until ${c}:00`}
+    }else{
+      const next=h<o?wd:(wd+1)%7; const no=H[next][0];
+      if(lang==='lv'){big='Šobrīd slēgts';small=(next===wd?'šodien':DN.lv[next])+` no ${no}:00`}
+      else{big='Closed right now';small=(next===wd?'today':DN.en[next])+` from ${no}:00`}
+    }
+    $$('[data-disc]').forEach(d=>{d.querySelector('b').textContent=big;d.querySelector('small').textContent=small});
+    const ul=$('#bars'); ul.innerHTML='';
+    for(const [label,d] of rows[lang]){const [oo,cc]=H[d];const li=document.createElement('li');const isNow=(d===1&&wd>=1&&wd<=4)||d===wd;if(isNow)li.className='now';
+      li.innerHTML=`<span>${label}</span><span class="t"><i style="left:${(oo-8)/15*100}%;width:${(cc-oo)/15*100}%"></i></span><span class="h">${oo}:00 – ${cc}:00</span>`;ul.appendChild(li)}
+    const sc=document.createElement('li');sc.className='scale';sc.innerHTML='<span></span><div><span>8</span><span>12</span><span>16</span><span>20</span><span>23</span></div><span></span>';ul.appendChild(sc);
+  }
+  const T={
+    lv:{hello:'Labdien! Vēlos rezervēt galdu svinībām Yolkhaüs.',occ:'Iemesls',guests:'Viesu skaits',when:'Kad',about:'ap',wish:'Vēlmes',name:'Vārds',phone:'Tālrunis',dash:'…',subj:'Svinības Yolkhaüs'},
+    en:{hello:'Hello! I would like to book a table for a celebration at Yolkhaüs.',occ:'Occasion',guests:'Guests',when:'When',about:'around',wish:'Wishes',name:'Name',phone:'Phone',dash:'…',subj:'A celebration at Yolkhaüs'}
+  };
+  const time=$('#time'); for(let h=8;h<=21;h++){for(const m of ['00','30']){if(h===21&&m==='30')continue;const o=document.createElement('option');o.value=o.textContent=String(h).padStart(2,'0')+':'+m;if(h===11&&m==='00')o.selected=true;time.appendChild(o)}}
+  const d=new Date();d.setDate(d.getDate()+3);$('#date').value=d.toISOString().slice(0,10);$('#date').min=new Date().toISOString().slice(0,10);
+  function fdate(v){if(!v)return T[lang].dash;const [y,m,dd]=v.split('-');return `${dd}.${m}.${y}`}
+  function build(){
+    const t=T[lang];const occ=$('#occ');const oc=occ.options[occ.selectedIndex];
+    const L=[t.hello,`${t.occ}: ${oc.dataset[lang]}`,`${t.guests}: ${qty}`,`${t.when}: ${fdate($('#date').value)}, ${t.about} ${time.value}`];
+    const w=$('#wish').value.trim(); L.push(`${t.wish}: ${w||t.dash}`);
+    L.push(`${t.name}: ${$('#name').value.trim()||t.dash} · ${t.phone}: ${$('#phone').value.trim()||t.dash}`);
+    const m=L.join('\n'); $('#msg').textContent=m;
+    $('#mail').href='mailto:yolkhausriga@gmail.com?subject='+encodeURIComponent(t.subj+' — '+fdate($('#date').value))+'&body='+encodeURIComponent(m);
+  }
+  function setLang(l){lang=l;$$('[data-lang]').forEach(e=>{e.hidden=e.dataset.lang!==l});document.documentElement.lang=l;$$('.lang a').forEach(a=>a.classList.toggle('on',a.dataset.set===l));$('#wish').placeholder=$('#wish').dataset['ph'+(l==='lv'?'Lv':'En')];[...$('#occ').options].forEach(o=>o.textContent=o.dataset[l]);disc();build()}
+  $$('.lang a').forEach(a=>a.addEventListener('click',()=>setLang(a.dataset.set)));
+  $('#minus').addEventListener('click',()=>{qty=Math.max(2,qty-1);$('#qty').value=qty;build()});
+  $('#plus').addEventListener('click',()=>{qty=Math.min(60,qty+1);$('#qty').value=qty;build()});
+  $$('#slip input,#slip select').forEach(e=>{e.addEventListener('input',build);e.addEventListener('change',build)});
+  disc();build();setInterval(disc,60000);
+})();
+</script>
+</body>
+</html>
